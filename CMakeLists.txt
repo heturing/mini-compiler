@@ -12,5 +12,5 @@ add_executable(mc
   src/diag/Diag.cpp
 )
 
-target_include_directories(mc PRIVATE src)
+target_include_directories(mc PRIVATE include)
 target_compile_options(mc PRIVATE -Wall -Wextra -Wpedantic)

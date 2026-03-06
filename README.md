@@ -35,7 +35,7 @@ print x;
 ### Grammer
 
 ```
-Program     ->  Stmt* EOF
+Program     ->  Stmt* eof
 Stmt        ->  LetStmt
             |   PrintStmt
 LetStmt     ->  "let" IDENT "=" Expr ";"
@@ -51,3 +51,21 @@ Primary     ->  INT
 ```
 
 ## Lexer
+
+The lexer recognizes the following Tokens.
+
+```
+* LET := let
+* PRINT := print
+* IDENT := [A-Za-z_][A-Za-z0-9_]*
+* INT := [0-9]+
+* PLUS := +
+* STAR := *
+* SLASH := /
+* EQUAL := =
+* SEMICOLON := ;
+* LPAREN := (
+* RPAREN := )
+* WHITESPACE := [ \t\r\n]+
+* EOF := eof
+```
